@@ -1,1 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Calculator</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
 
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(45deg, #0f2027, #203a43, #2c5364);
+        }
+
+        .calculator {
+            width: 350px;
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .display {
+            background-color: rgba(0, 0, 0, 0.3);
+            color: white;
+            padding: 20px;
+            text-align: right;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            min-height: 100px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            word-wrap: break-word;
+            word-break: break-all;
+        }
+
+        /* This shows the "work" (the calculation history) */
+        .previous-operand {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 1.1rem;
+            min-height: 24px;
+        }
+
+        /* This shows the current input/result */
+        .current-operand {
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .buttons {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 10px;
+        }
+
+        button {
+            padding: 15px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            background-color: rgba(255, 255, 255, 0.2);
+            color: white;
+            transition: 0.2s;
+        }
+
+        button:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .span-two {
+            grid-column: span 2;
+        }
+
+        .operator {
+            background-color: #f39c12;
+            color: white;
+        }
+
+        .operator:hover {
+            background-color: #e67e22;
+        }
+
+        .delete {
+            background-color: #e74c3c;
+        }
+
+        .delete:hover {
+            background-color: #c0392b;
+        }
+
+        .equals {
+            background-color: #27ae60;
+        }
+
+        .equals:hover {
+            background-color: #219150;
+        }
